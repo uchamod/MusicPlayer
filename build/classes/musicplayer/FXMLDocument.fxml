@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="614.0" prefWidth="400.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicplayer.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+        <Label fx:id="lbl" alignment="CENTER" layoutX="41.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="358.0" text="Mp3 Player" textFill="WHITE">
+            <font>
+                <Font name="Gill Sans MT" size="28.0" />
+            </font>
+        </Label>
+        <Button fx:id="play" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="176.0" layoutY="452.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#playit" prefHeight="48.0" prefWidth="48.0" scaleShape="false" style="-fx-background-color: white; -fx-background-image: url(/musicplayer/play.png);" AnchorPane.leftAnchor="176.0" AnchorPane.rightAnchor="176.0">
+            <rotationAxis>
+                <Point3D x="19.0" z="1.0" />
+            </rotationAxis>
+        </Button>
+        <Button fx:id="reset" alignment="CENTER" contentDisplay="CENTER" layoutX="184.0" layoutY="510.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#resetit" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: black;" styleClass="resetbutton" stylesheets="@images.css" />
+        <Button fx:id="prvious" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" layoutX="132.0" layoutY="460.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#prviousone" prefHeight="32.0" prefWidth="32.0" scaleShape="false" style="-fx-background-color: black;" styleClass="backbutton" stylesheets="@images.css" />
+        <Button fx:id="next" alignment="CENTER" contentDisplay="CENTER" layoutX="235.0" layoutY="460.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#nextone" prefHeight="32.0" prefWidth="32.0" style="-fx-background-color: black;" styleClass="nextbutton" stylesheets="@images.css" />
+        <ProgressBar fx:id="lenth" layoutX="1.0" layoutY="430.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="12.0" prefWidth="400.0" progress="0.0" style="-fx-accent: green; -fx-background-color: white;" />
+        <ComboBox fx:id="speed" layoutX="6.0" layoutY="508.0" onAction="#speedup" prefHeight="25.0" prefWidth="117.0" promptText="Speed" />
+        <Slider fx:id="volume" layoutX="276.0" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="12.0" prefWidth="118.0" style="-fx-accent: green; -fx-background-color: black;" value="50.0" AnchorPane.leftAnchor="276.0" AnchorPane.rightAnchor="1.0">
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+        </Slider>
+        <ImageView fx:id="music" fitHeight="40.0" fitWidth="42.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../music.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="75.0" fitWidth="400.0" layoutY="552.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0">
+            <image>
+                <Image url="@../RODENTS.MP3.png" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imageloop" fitHeight="350.0" fitWidth="400.0" layoutX="7.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <image>
+            <Image url="@../3.png" />
+         </image></ImageView>
+        <ImageView fx:id="vol" fitHeight="16.0" fitWidth="16.0" layoutX="259.0" layoutY="518.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@vol.png" />
+            </image>
+        </ImageView>
+    </children>
+</AnchorPane>

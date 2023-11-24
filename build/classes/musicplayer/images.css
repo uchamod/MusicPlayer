@@ -1,0 +1,10 @@
+
+
+.nextbutton{-fx-background-image:url("/musicplayer/next.png");}
+
+.backbutton{-fx-background-image:url("/musicplayer/back.png");}
+
+.resetbutton{-fx-background-image:url("/musicplayer/stop.png")}
+
+
+
